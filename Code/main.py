@@ -1,9 +1,12 @@
+# Configure the Python's path
 import os
 import sys
 base_dir = 'E:/WPS_Sync_Files/LSTM_with_Attention_py/Code/attention_keras'
 print(base_dir)
 sys.path.insert(0, base_dir)
 
+
+# Train the sub-word mapping
 import sentencepiece as spm
 
 target_vocab_size_en = 400
@@ -23,3 +26,4 @@ sp_en.Load(os.path.join(base_dir, "data", 'en.model'))
 
 sp_fr = spm.SentencePieceProcessor()
 sp_fr.Load(os.path.join(base_dir, "data", 'fr.model'))
+
